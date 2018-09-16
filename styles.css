@@ -1,6 +1,5 @@
 :root {
   --black: #333;
-  --heading-font: "Arvo", Serif;
   --heading-font: "Ramaraja", serif;
   --body-font: "Lato", Sans-Serif;
   --heading-ratio: 1.3;
@@ -37,13 +36,17 @@ h1.site-title span {
 
 .initial {
   font-family: "Ramaraja", serif;
+  letter-spacing: -0.03em;
 }
 
 .initial:first-child {
-  letter-spacing: -0.03em;
   font-size: calc(var(--h1-font-size) * 2);
   position: relative;
   bottom: -0.1em;
+}
+
+article span.period {
+  font-size: 2em;
 }
 
 /* Social links */
@@ -139,37 +142,34 @@ body {
 @media (hover: hover) {
   .bubble {
     transition: 3s;
-    left: 3%;
-    width: 3px;
-    height: 3px;
-    background: #555;
-    border-radius: 200px;
+    color: #555;
     position: absolute;
+    font-size: 1.3em;
   }
 
   .x1 {
-    background: #666;
+    color: #666;
     margin-left: 50%;
     animation: driftUp 15s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
   }
 
   .x2 {
-    background: #777;
+    color: #777;
     margin-left: 60%;
     animation: driftUp 20s linear infinite 1s,
-      sideWays 2s ease-in-out infinite alternate;
+      sideWays 4.5s ease-in-out infinite alternate;
   }
 
   .x3 {
-    background: #888;
+    color: #888;
     margin-left: 40%;
     animation: driftUp 25s linear infinite 3s,
       sideWays 3.5s ease-in-out infinite alternate;
   }
 
   .x4 {
-    background: #999;
+    color: #999;
     margin-left: 20%;
     transform: scale(0.9);
     animation: driftUp 18s linear infinite,
@@ -177,7 +177,7 @@ body {
   }
 
   .x5 {
-    background: #777;
+    color: #777;
     margin-left: 80%;
     animation: driftUp 16s linear infinite 2s,
       sideWays 4.5s ease-in-out infinite alternate;

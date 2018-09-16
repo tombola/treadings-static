@@ -154,21 +154,21 @@ body {
   .x1 {
     color: #666;
     margin-left: 50%;
-    animation: driftUp 15s linear infinite,
+    animation: driftDown 15s linear infinite,
       sideWays 4s ease-in-out infinite alternate;
   }
 
   .x2 {
     color: #777;
     margin-left: 60%;
-    animation: driftUp 20s linear infinite 1s,
+    animation: driftDown 20s linear infinite 1s,
       sideWays 4.5s ease-in-out infinite alternate;
   }
 
   .x3 {
     color: #888;
     margin-left: 40%;
-    animation: driftUp 25s linear infinite 3s,
+    animation: driftDown 25s linear infinite 3s,
       sideWays 3.5s ease-in-out infinite alternate;
   }
 
@@ -176,18 +176,18 @@ body {
     color: #999;
     margin-left: 20%;
     transform: scale(0.9);
-    animation: driftUp 18s linear infinite,
+    animation: driftDown 18s linear infinite,
       sideWays 6s ease-in-out infinite alternate;
   }
 
   .x5 {
     color: #777;
     margin-left: 80%;
-    animation: driftUp 16s linear infinite 2s,
+    animation: driftDown 16s linear infinite 2s,
       sideWays 4.5s ease-in-out infinite alternate;
   }
 
-  @keyframes driftUp {
+  @keyframes driftDown {
     0% {
       top: 0;
     }

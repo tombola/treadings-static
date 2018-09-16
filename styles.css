@@ -165,6 +165,20 @@ h1 .initial {
   position: absolute;
 }
 
+.big-t {
+  transition: 2s;
+  position: absolute;
+  font-size: 80em;
+  font-weight: 700;
+  line-height: 0;
+  bottom: 0.3em;
+  right: 8%;
+  color: var(--dark-backdrop);
+  opacity: 0.3;
+
+  /*animation: bob 3s ease-in-out infinite alternate;*/
+}
+
 @media (hover: hover) {
   .bubble {
     transition: 3s;
@@ -227,10 +241,26 @@ h1 .initial {
       left: 20%;
     }
   }
+
+  @keyframes bob {
+    0% {
+      bottom: 0.3em;
+    }
+    100% {
+      bottom: 0.31em;
+    }
+  }
 }
 
 @media (min-resolution: 150dpi) {
   :root {
     --base-font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .big-t {
+    opacity: 0.4;
+    right: -0.08em;
   }
 }

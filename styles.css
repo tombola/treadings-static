@@ -1,9 +1,10 @@
 :root {
   --black: #333;
   --heading-font: "Arvo", Serif;
+  --heading-font: "Ramaraja", serif;
   --body-font: "Lato", Sans-Serif;
   --heading-ratio: 1.3;
-  --base-font-size: 14px;
+  --base-font-size: 16px;
   --h4-font-size: calc(var(--base-font-size) * var(--heading-ratio));
   --h3-font-size: calc(var(--h4-font-size) * var(--heading-ratio));
   --h2-font-size: calc(var(--h3-font-size) * var(--heading-ratio));
@@ -14,27 +15,12 @@
   color: var(--black);
   padding: 0;
   margin: 0;
-  font-size: var(--body-font);
-  font-family: var(--body-font);
-  font-size: var(--base-font-size);
 }
 
 html,
 body {
   width: 100%;
   height: 100%;
-}
-
-body {
-  background-color: #fefefe;
-  background-image: radial-gradient(
-    circle,
-    #516286,
-    #83619c,
-    #c3548e,
-    #ed515e,
-    #ed7304
-  );
 }
 
 article {
@@ -63,19 +49,29 @@ svg.icon {
   fill: var(--black);
 }
 
-h1.site-title {
-  font-weight: 700;
+h1.site-title,
+h1.site-title span {
+  font-weight: 300;
 }
 
 .initial {
   font-family: "Ramaraja", serif;
-  font-size: calc(var(--h1-font-size) * 1.4);
 }
 
 .initial:first-child {
-  padding-right: 0.04em;
-  font-size: calc(var(--h1-font-size) * 1.5);
+  letter-spacing: -0.03em;
+  font-size: calc(var(--h1-font-size) * 2);
+  position: relative;
+  bottom: -0.1em;
+  /*font-weight: 700;*/
 }
+
+/*.initial:nth-child(2) {
+  letter-spacing: -0.1em;
+  font-size: calc(var(--h1-font-size) * 1.8);
+  position: relative;
+  bottom: -0.02em;
+}*/
 
 h1,
 h2,
@@ -84,7 +80,7 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  line-height: 2;
+  line-height: var(--heading-ratio);
 }
 
 h1 {
@@ -105,6 +101,9 @@ h4 {
 
 p {
   margin-bottom: 1em;
+  font-size: var(--body-font);
+  font-family: var(--body-font);
+  font-size: var(--base-font-size);
 }
 
 ul li {

@@ -21,6 +21,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  background: linear-gradient(#eee, #bbb);
 }
 
 article {
@@ -43,7 +44,6 @@ h1.site-title span {
   font-size: calc(var(--h1-font-size) * 2);
   position: relative;
   bottom: -0.1em;
-  /*font-weight: 700;*/
 }
 
 /* Social links */
@@ -62,12 +62,12 @@ ul.social li a {
 }
 
 ul.social li a span {
-  opacity: 0; /* Completely invisible. */
-  transition: 1s; /* A 1 second transition. */
+  opacity: 0;
+  transition: 1s;
 }
 
 ul.social li a:hover span {
-  opacity: 1; /* Completely visible. */
+  opacity: 1;
 }
 
 svg.icon {
@@ -124,12 +124,80 @@ a {
 
 /* Animation */
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
+body {
+  overflow: hidden;
+}
+
+.bubble-shield {
+  background: linear-gradient(#dfdfdf, rgba(255, 255, 255, 0));
+  z-index: 999;
+  height: 40px;
+  width: 100%;
+  position: absolute;
+}
+
+@media (hover: hover) {
+  .bubble {
+    transition: 3s;
+    left: 3%;
+    width: 3px;
+    height: 3px;
+    background: #555;
+    border-radius: 200px;
+    position: absolute;
   }
 
-  100% {
-    opacity: 1;
+  .x1 {
+    background: #666;
+    margin-left: 50%;
+    animation: driftUp 15s linear infinite,
+      sideWays 4s ease-in-out infinite alternate;
+  }
+
+  .x2 {
+    background: #777;
+    margin-left: 60%;
+    animation: driftUp 20s linear infinite 1s,
+      sideWays 2s ease-in-out infinite alternate;
+  }
+
+  .x3 {
+    background: #888;
+    margin-left: 40%;
+    animation: driftUp 25s linear infinite 3s,
+      sideWays 3.5s ease-in-out infinite alternate;
+  }
+
+  .x4 {
+    background: #999;
+    margin-left: 20%;
+    transform: scale(0.9);
+    animation: driftUp 18s linear infinite,
+      sideWays 6s ease-in-out infinite alternate;
+  }
+
+  .x5 {
+    background: #777;
+    margin-left: 80%;
+    animation: driftUp 16s linear infinite 2s,
+      sideWays 4.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes driftUp {
+    0% {
+      top: 0;
+    }
+    100% {
+      top: 100%;
+    }
+  }
+
+  @keyframes sideWays {
+    0% {
+      left: 10%;
+    }
+    100% {
+      left: 20%;
+    }
   }
 }

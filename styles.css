@@ -27,27 +27,7 @@ article {
   padding: 5vh 10vw 0 10vw;
 }
 
-ul.social {
-}
-
-ul.social li {
-  display: flex;
-  align-items: center;
-  margin: 10px;
-  font-size: 2rem;
-  margin-left: 0;
-}
-
-ul.social li a {
-  font-size: var(--h3-font-size);
-}
-
-svg.icon {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
-  fill: var(--black);
-}
+/* Site title */
 
 h1.site-title,
 h1.site-title span {
@@ -66,12 +46,38 @@ h1.site-title span {
   /*font-weight: 700;*/
 }
 
-/*.initial:nth-child(2) {
-  letter-spacing: -0.1em;
-  font-size: calc(var(--h1-font-size) * 1.8);
-  position: relative;
-  bottom: -0.02em;
-}*/
+/* Social links */
+
+ul.social {
+}
+
+ul.social li {
+  display: flex;
+}
+
+ul.social li a {
+  display: flex;
+  margin: 10px;
+  margin-left: 0;
+}
+
+ul.social li a span {
+  opacity: 0; /* Completely invisible. */
+  transition: 1s; /* A 1 second transition. */
+}
+
+ul.social li a:hover span {
+  opacity: 1; /* Completely visible. */
+}
+
+svg.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  fill: var(--black);
+}
+
+/* Typography */
 
 h1,
 h2,
@@ -99,8 +105,9 @@ h4 {
   font-size: var(--h4-font-size);
 }
 
-p {
-  margin-bottom: 1em;
+p,
+a {
+  margin-bottom: 1.5em;
   font-size: var(--body-font);
   font-family: var(--body-font);
   font-size: var(--base-font-size);
@@ -113,4 +120,16 @@ ul li {
 a {
   text-decoration: none;
   color: var(--black);
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
